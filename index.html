@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dance Academy</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho e Menu de Navegação -->
+  <header>
+    <div class="logo">
+      <img src="favicon.png" alt="Dance Academy Logo" class="logo-img">
+      <h1>Dance Academy</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#apresentacao">Início</a></li>
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de Apresentação -->
+  <section id="apresentacao" class="hero">
+    <h2>Bem-vindo à Dance Academy</h2>
+    <p>O lugar onde a paixão pelo movimento ganha vida. Junta-te a nós e descobre o teu ritmo!</p>
+  </section>
+
+  <!-- Seção Interativa JavaScript -->
+  <section class="interativo reveal active">
+    <h2>Área Interativa</h2>
+    <div class="botoes-interativos">
+      <button onclick="mostrarMensagem()">Agradecimento</button>
+      <button onclick="mudarCor()">Alterar Cor de Fundo</button>
+      <button onclick="modoEscuro()">Modo Escuro <img src="star.gif" alt="Estrela" class="gif-btn"></button>
+    </div>
+
+    <div class="resultados">
+      <p id="mensagem-agradecimento" class="mensagem-box"></p>
+      <p id="contador">Visitas: 0</p>
+      <p id="frase-motivacional" class="frase-caixa"></p>
+    </div>
+  </section>
+
+  <!-- Seção de Modalidades -->
+  <section id="modalidades" class="secao reveal active">
+    <h2>As Nossas Modalidades</h2>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Hip-Hop</h3>
+        <p>Aprende os ritmos urbanos mais energéticos e desenvolve a tua coordenação e estilo.</p>
+      </div>
+      <div class="card">
+        <h3>Ballet Clássico</h3>
+        <p>Desenvolve disciplina, postura, flexibilidade e elegância técnica.</p>
+      </div>
+      <div class="card">
+        <h3>Salsa e Bachata</h3>
+        <p>Sente os ritmos latinos e aprende a dançar a par com diversão garantida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Galeria de Imagens -->
+  <section id="galeria" class="secao reveal active">
+    <h2>Galeria de Imagens</h2>
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500" alt="Dança 1">
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=500" alt="Dança 2">
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=500" alt="Dança 3">
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?w=500" alt="Bailarina no palco">
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=500" alt="Homem a fazer suporte de mão">
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=500" alt="Mulher a dançar na calçada">
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Contacto -->
+  <section id="contacto" class="secao reveal active">
+    <h2>Formulário de Contacto</h2>
+    <form class="form-contacto" onsubmit="enviarContacto(event)">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required placeholder="O teu nome">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required placeholder="O teu e-mail">
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="4" required placeholder="Escreve a tua mensagem..."></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+    <p id="status-envio" class="mensagem-box"></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 Dance Academy. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
